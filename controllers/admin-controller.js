@@ -27,6 +27,9 @@ const adminController = {
     if (!name) throw new Error('Restaurant name is required!')
 
     const { file } = req
+    console.log('==========')
+    console.log(categoryId)
+    console.log('==========')
     return imgurFileHandler(file)
       .then(filePath => Restaurant.create({
         name,
